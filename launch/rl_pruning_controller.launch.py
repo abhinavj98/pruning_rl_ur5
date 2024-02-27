@@ -44,6 +44,11 @@ def generate_launch_description():
         ],
     )
 
+    joy_node = Node(
+        package="joy",
+        executable="joy_node",
+    )
+
 
     return LaunchDescription(
         [
@@ -51,5 +56,6 @@ def generate_launch_description():
             robot_ip_arg,
             use_sim_arg,
             ur_launch,
+            joy_node
         ]
     )
